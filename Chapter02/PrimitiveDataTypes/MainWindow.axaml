@@ -31,7 +31,7 @@
 				</Grid.ColumnDefinitions>
 				<TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="28" Text="Choose a data type"/>
 				<TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="28" Text="Sample value"/>
-				<ListBox x:Name="type" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="150" FontSize="24" Background="LightGray" SelectionChanged="typeSelectedChanged">
+				<ListBox x:Name="types" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="150" FontSize="24" Background="LightGray" SelectionChanged="typeSelectedChanged">
 					<ListBoxItem Content="int"/>
 					<ListBoxItem Content="long"/>
 					<ListBoxItem Content="float"/>
