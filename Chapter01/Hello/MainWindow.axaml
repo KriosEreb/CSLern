@@ -1,0 +1,15 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="Hello.MainWindow"
+        Title="Hello"
+		Width="400" 
+		Height="200">
+	<Grid>
+		<TextBlock x:Name="textBlock" Text="Please enter your name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" TextWrapping="Wrap" FontSize="24"/>
+		<TextBox x:Name="userName" Watermark="Your Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,58,0,0" TextWrapping="Wrap" Width="248"/>
+    	<Button x:Name="button" Click="button_Click" Content="Ok" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="263,58,0,0" />
+	</Grid>
+</Window>
