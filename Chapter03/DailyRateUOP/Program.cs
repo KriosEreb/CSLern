@@ -17,7 +17,7 @@ namespace DailyRateUOP {
 		}
 
 		private double calculateFree(double dailyRate = 500.0) {
-			Console.WriteLine("calculateFree using one parametr");
+			Console.WriteLine("calculateFree using one parameter");
 
 			int defaultNoOfDays = 1;
 			return dailyRate * defaultNoOfDays;
