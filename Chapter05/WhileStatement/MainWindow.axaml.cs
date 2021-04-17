@@ -1,3 +1,4 @@
+using System.IO;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
@@ -11,10 +12,28 @@ namespace WhileStatement {
 
 		private async void openFileClick(object sender, RoutedEventArgs e) {
 			var fp = new OpenFileDialog();
-			fp.InitialDirectory = "/home/krios/VSCode";
+			fp.Directory = "/home/krios/Desktop/";
 			fp.Filters.Add(new FileDialogFilter() { Name = "All", Extensions = { "*" } });
 
-			var file = await fp.ShowAsync(Window);
+			var file = await fp.ShowAsync(this);
+			if (file != null) {
+				fileName.Text = file[0];
+				TextReader reader = new StreamReader(file[0]);
+
+				displayData(reader);
+			}
+		}
+
+		private void displayData(TextReader reader) {
+			source.Text = "";
+			string? line = reader.ReadLine();
+
+			while (line != null) {
+				source.Text += line + '\n';
+				line = reader.ReadLine();
+			}
+
+			reader.Dispose();
 		}
 	}
 }
